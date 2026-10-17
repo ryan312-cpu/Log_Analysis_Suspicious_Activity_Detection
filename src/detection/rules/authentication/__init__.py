@@ -1,0 +1,3 @@
+from src.detection.rules.authentication.brute_force_rule import BruteForceRule
+from src.detection.rules.authentication.credential_stuffing_rule import CredentialStuffingRule
+from src.detection.rules.authentication.password_spraying_rule import AuthenticationPasswordSprayingRule

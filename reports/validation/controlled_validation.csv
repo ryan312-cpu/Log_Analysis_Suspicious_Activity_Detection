@@ -1,0 +1,9 @@
+Test ID,Scenario,Expected Rule,Expected Severity,Actual Result,Status
+CV-001,Multiple Failed Logins,AUTH-001,HIGH,AUTH-001 fired (HIGH),PASS
+CV-002,Password Spraying,AUTH-005,HIGH,AUTH-005 fired (HIGH),PASS
+CV-003,Login After Failures,AUTH-004,CRITICAL,AUTH-004 fired (CRITICAL),PASS
+CV-004,Sensitive Path Enumeration,WEB-005,HIGH,WEB-005 fired (HIGH),PASS
+CV-005,Excessive Request Volume,WEB-002,MEDIUM,WEB-002 fired (MEDIUM),PASS
+CV-006,Firewall Denial Burst,FW-001,HIGH,FW-001 fired (HIGH),PASS
+CV-007,Application Error Burst,APP-001,MEDIUM,APP-001 fired (MEDIUM),PASS
+CV-008,Service Failure Burst,SYS-001,HIGH,SYS-001 fired (HIGH),PASS

@@ -1,0 +1,9 @@
+2026-09-25 08:00:01 SYSTEM service=sshd status=started
+2026-09-25 08:05:10 SYSTEM service=nginx status=started
+2026-09-25 08:10:22 SYSTEM service=database status=started
+2026-09-25 10:20:01 SYSTEM service=payment status=error
+2026-09-25 10:20:02 SYSTEM service=payment status=error
+2026-09-25 10:20:03 SYSTEM service=payment status=error
+2026-09-25 10:20:04 SYSTEM service=payment status=error
+2026-09-25 10:20:05 SYSTEM service=payment status=error
+2026-09-25 11:00:01 SYSTEM service=payment status=recovered

@@ -1,0 +1,9 @@
+2026-09-25 09:00:01 FIREWALL action=allow src=192.168.10.25 dst=10.0.0.10 service=https
+2026-09-25 09:02:14 FIREWALL action=allow src=192.168.10.31 dst=10.0.0.10 service=https
+2026-09-25 09:05:22 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+2026-09-25 09:05:24 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+2026-09-25 09:05:26 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+2026-09-25 09:05:28 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+2026-09-25 09:05:30 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+2026-09-25 09:10:12 FIREWALL action=allow src=192.168.10.25 dst=10.0.0.10 service=https 
+2026-09-25 09:15:42 FIREWALL action=allow src=192.168.10.42 dst=10.0.0.10 service=https

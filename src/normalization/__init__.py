@@ -1,0 +1,1 @@
+"""Shared event schema for parsed security logs."""

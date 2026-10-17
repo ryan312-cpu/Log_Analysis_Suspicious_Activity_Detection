@@ -1,0 +1,3 @@
+from src.detection.rules.web.excessive_http_requests_rule import ExcessiveHttpRequestsRule
+from src.detection.rules.web.sensitive_path_access_rule import SensitivePathAccessRule
+from src.detection.rules.web.sql_injection_attempt_rule import SqlInjectionAttemptRule

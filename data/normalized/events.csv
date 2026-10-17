@@ -1,0 +1,133 @@
+timestamp,event_type,event_category,source_ip,username,service,status,http_method,http_path,response_code,label,attack_category,reason
+2026-09-25 09:00:00,LOGIN_SUCCESS,authentication,192.168.1.10,normal_user_0,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 09:10:00,LOGIN_SUCCESS,authentication,192.168.1.11,normal_user_1,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 09:20:00,LOGIN_SUCCESS,authentication,192.168.1.12,normal_user_2,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 09:30:00,LOGIN_SUCCESS,authentication,192.168.1.13,normal_user_3,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 09:40:00,LOGIN_SUCCESS,authentication,192.168.1.14,normal_user_4,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 09:50:00,LOGIN_SUCCESS,authentication,192.168.1.15,normal_user_5,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 10:00:00,LOGIN_SUCCESS,authentication,192.168.1.16,normal_user_6,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 10:10:00,LOGIN_SUCCESS,authentication,192.168.1.17,normal_user_7,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 10:20:00,LOGIN_SUCCESS,authentication,192.168.1.18,normal_user_8,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 10:30:00,LOGIN_SUCCESS,authentication,192.168.1.19,normal_user_9,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 10:40:00,LOGIN_SUCCESS,authentication,192.168.1.20,normal_user_10,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 10:50:00,LOGIN_SUCCESS,authentication,192.168.1.21,normal_user_11,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 11:00:00,LOGIN_SUCCESS,authentication,192.168.1.22,normal_user_12,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 11:10:00,LOGIN_SUCCESS,authentication,192.168.1.23,normal_user_13,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 11:20:00,LOGIN_SUCCESS,authentication,192.168.1.24,normal_user_14,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 11:30:00,LOGIN_SUCCESS,authentication,192.168.1.25,normal_user_15,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 11:40:00,LOGIN_SUCCESS,authentication,192.168.1.26,normal_user_16,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 11:50:00,LOGIN_SUCCESS,authentication,192.168.1.27,normal_user_17,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 12:00:00,LOGIN_SUCCESS,authentication,192.168.1.28,normal_user_18,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 12:10:00,LOGIN_SUCCESS,authentication,192.168.1.29,normal_user_19,ssh,success,,,,normal,,Normal authenticated user session
+2026-09-25 09:02:00,HTTP_REQUEST,web,192.168.2.10,,http,success,GET,/home,200.0,normal,,Normal web page browsing
+2026-09-25 09:12:00,HTTP_REQUEST,web,192.168.2.11,,http,success,GET,/about,200.0,normal,,Normal web page browsing
+2026-09-25 09:22:00,HTTP_REQUEST,web,192.168.2.12,,http,success,GET,/contact,200.0,normal,,Normal web page browsing
+2026-09-25 09:32:00,HTTP_REQUEST,web,192.168.2.13,,http,success,GET,/services,200.0,normal,,Normal web page browsing
+2026-09-25 09:42:00,HTTP_REQUEST,web,192.168.2.14,,http,success,GET,/products,200.0,normal,,Normal web page browsing
+2026-09-25 09:52:00,HTTP_REQUEST,web,192.168.2.15,,http,success,GET,/home,200.0,normal,,Normal web page browsing
+2026-09-25 10:02:00,HTTP_REQUEST,web,192.168.2.16,,http,success,GET,/about,200.0,normal,,Normal web page browsing
+2026-09-25 10:12:00,HTTP_REQUEST,web,192.168.2.17,,http,success,GET,/contact,200.0,normal,,Normal web page browsing
+2026-09-25 10:22:00,HTTP_REQUEST,web,192.168.2.18,,http,success,GET,/services,200.0,normal,,Normal web page browsing
+2026-09-25 10:32:00,HTTP_REQUEST,web,192.168.2.19,,http,success,GET,/products,200.0,normal,,Normal web page browsing
+2026-09-25 10:42:00,HTTP_REQUEST,web,192.168.2.20,,http,success,GET,/home,200.0,normal,,Normal web page browsing
+2026-09-25 10:52:00,HTTP_REQUEST,web,192.168.2.21,,http,success,GET,/about,200.0,normal,,Normal web page browsing
+2026-09-25 11:02:00,HTTP_REQUEST,web,192.168.2.22,,http,success,GET,/contact,200.0,normal,,Normal web page browsing
+2026-09-25 11:12:00,HTTP_REQUEST,web,192.168.2.23,,http,success,GET,/services,200.0,normal,,Normal web page browsing
+2026-09-25 11:22:00,HTTP_REQUEST,web,192.168.2.24,,http,success,GET,/products,200.0,normal,,Normal web page browsing
+2026-09-25 11:32:00,HTTP_REQUEST,web,192.168.2.25,,http,success,GET,/home,200.0,normal,,Normal web page browsing
+2026-09-25 11:42:00,HTTP_REQUEST,web,192.168.2.26,,http,success,GET,/about,200.0,normal,,Normal web page browsing
+2026-09-25 11:52:00,HTTP_REQUEST,web,192.168.2.27,,http,success,GET,/contact,200.0,normal,,Normal web page browsing
+2026-09-25 12:02:00,HTTP_REQUEST,web,192.168.2.28,,http,success,GET,/services,200.0,normal,,Normal web page browsing
+2026-09-25 12:12:00,HTTP_REQUEST,web,192.168.2.29,,http,success,GET,/products,200.0,normal,,Normal web page browsing
+2026-09-25 09:00:00,APP_LOG,application,192.168.3.10,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 09:20:00,APP_LOG,application,192.168.3.11,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 09:40:00,APP_LOG,application,192.168.3.12,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 10:00:00,APP_LOG,application,192.168.3.13,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 10:20:00,APP_LOG,application,192.168.3.14,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 10:40:00,APP_LOG,application,192.168.3.15,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 11:00:00,APP_LOG,application,192.168.3.16,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 11:20:00,APP_LOG,application,192.168.3.17,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 11:40:00,APP_LOG,application,192.168.3.18,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 12:00:00,APP_LOG,application,192.168.3.19,,inventory,success,,,,normal,,Normal application transaction
+2026-09-25 09:05:00,FIREWALL_EVENT,firewall,192.168.4.10,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 09:25:00,FIREWALL_EVENT,firewall,192.168.4.11,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 09:45:00,FIREWALL_EVENT,firewall,192.168.4.12,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 10:05:00,FIREWALL_EVENT,firewall,192.168.4.13,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 10:25:00,FIREWALL_EVENT,firewall,192.168.4.14,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 10:45:00,FIREWALL_EVENT,firewall,192.168.4.15,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 11:05:00,FIREWALL_EVENT,firewall,192.168.4.16,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 11:25:00,FIREWALL_EVENT,firewall,192.168.4.17,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 11:45:00,FIREWALL_EVENT,firewall,192.168.4.18,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 12:05:00,FIREWALL_EVENT,firewall,192.168.4.19,,tcp/443,ALLOW,,,,normal,,Legitimate firewall allowed connection
+2026-09-25 09:08:00,SYSTEM_EVENT,system,192.168.5.10,,cron,running,,,,normal,,Routine system service active
+2026-09-25 09:28:00,SYSTEM_EVENT,system,192.168.5.11,,cron,running,,,,normal,,Routine system service active
+2026-09-25 09:48:00,SYSTEM_EVENT,system,192.168.5.12,,cron,running,,,,normal,,Routine system service active
+2026-09-25 10:08:00,SYSTEM_EVENT,system,192.168.5.13,,cron,running,,,,normal,,Routine system service active
+2026-09-25 10:28:00,SYSTEM_EVENT,system,192.168.5.14,,cron,running,,,,normal,,Routine system service active
+2026-09-25 10:48:00,SYSTEM_EVENT,system,192.168.5.15,,cron,running,,,,normal,,Routine system service active
+2026-09-25 11:08:00,SYSTEM_EVENT,system,192.168.5.16,,cron,running,,,,normal,,Routine system service active
+2026-09-25 11:28:00,SYSTEM_EVENT,system,192.168.5.17,,cron,running,,,,normal,,Routine system service active
+2026-09-25 11:48:00,SYSTEM_EVENT,system,192.168.5.18,,cron,running,,,,normal,,Routine system service active
+2026-09-25 12:08:00,SYSTEM_EVENT,system,192.168.5.19,,cron,running,,,,normal,,Routine system service active
+2026-09-25 10:00:00,LOGIN_FAILED,authentication,10.100.1.1,admin_victim,ssh,failed,,,,suspicious,brute_force,Multiple failed logins
+2026-09-25 10:00:05,LOGIN_FAILED,authentication,10.100.1.1,admin_victim,ssh,failed,,,,suspicious,brute_force,Multiple failed logins
+2026-09-25 10:00:10,LOGIN_FAILED,authentication,10.100.1.1,admin_victim,ssh,failed,,,,suspicious,brute_force,Multiple failed logins
+2026-09-25 10:00:15,LOGIN_FAILED,authentication,10.100.1.1,admin_victim,ssh,failed,,,,suspicious,brute_force,Multiple failed logins
+2026-09-25 10:00:20,LOGIN_FAILED,authentication,10.100.1.1,admin_victim,ssh,failed,,,,suspicious,brute_force,Multiple failed logins
+2026-09-25 10:00:25,LOGIN_FAILED,authentication,10.100.1.1,admin_victim,ssh,failed,,,,suspicious,brute_force,Multiple failed logins
+2026-09-25 10:10:00,ACCESS_DENIED,authentication,10.100.1.2,restricted_user,ssh,denied,,,,suspicious,repeated_access_denied,Repeated access denied
+2026-09-25 10:10:05,ACCESS_DENIED,authentication,10.100.1.2,restricted_user,ssh,denied,,,,suspicious,repeated_access_denied,Repeated access denied
+2026-09-25 10:10:10,ACCESS_DENIED,authentication,10.100.1.2,restricted_user,ssh,denied,,,,suspicious,repeated_access_denied,Repeated access denied
+2026-09-25 10:10:15,ACCESS_DENIED,authentication,10.100.1.2,restricted_user,ssh,denied,,,,suspicious,repeated_access_denied,Repeated access denied
+2026-09-25 02:15:00,LOGIN_SUCCESS,authentication,10.100.1.3,night_crawler,ssh,success,,,,suspicious,unusual_login_time,Login outside business hours
+2026-09-25 10:20:00,LOGIN_FAILED,authentication,10.100.1.4,compromised_acc,ssh,failed,,,,suspicious,successful_login_after_failures,Prior failed attempt
+2026-09-25 10:20:10,LOGIN_FAILED,authentication,10.100.1.4,compromised_acc,ssh,failed,,,,suspicious,successful_login_after_failures,Prior failed attempt
+2026-09-25 10:20:20,LOGIN_FAILED,authentication,10.100.1.4,compromised_acc,ssh,failed,,,,suspicious,successful_login_after_failures,Prior failed attempt
+2026-09-25 10:20:30,LOGIN_FAILED,authentication,10.100.1.4,compromised_acc,ssh,failed,,,,suspicious,successful_login_after_failures,Prior failed attempt
+2026-09-25 10:20:45,LOGIN_SUCCESS,authentication,10.100.1.4,compromised_acc,ssh,success,,,,suspicious,successful_login_after_failures,Login after repeated failures
+2026-09-25 10:30:00,LOGIN_FAILED,authentication,10.100.1.5,spray_u1,ssh,failed,,,,suspicious,password_spraying,Password spraying across accounts
+2026-09-25 10:30:10,LOGIN_FAILED,authentication,10.100.1.5,spray_u2,ssh,failed,,,,suspicious,password_spraying,Password spraying across accounts
+2026-09-25 10:30:20,LOGIN_FAILED,authentication,10.100.1.5,spray_u3,ssh,failed,,,,suspicious,password_spraying,Password spraying across accounts
+2026-09-25 10:30:30,LOGIN_FAILED,authentication,10.100.1.5,spray_u4,ssh,failed,,,,suspicious,password_spraying,Password spraying across accounts
+2026-09-25 10:30:40,LOGIN_FAILED,authentication,10.100.1.5,spray_u5,ssh,failed,,,,suspicious,password_spraying,Password spraying across accounts
+2026-09-25 10:40:00,LOGIN_FAILED,authentication,10.100.1.6,tgt_u1,ssh,failed,,,,suspicious,multiple_account_targeting,Multiple accounts targeted from one IP
+2026-09-25 10:40:10,LOGIN_FAILED,authentication,10.100.1.6,tgt_u2,ssh,failed,,,,suspicious,multiple_account_targeting,Multiple accounts targeted from one IP
+2026-09-25 10:40:20,LOGIN_FAILED,authentication,10.100.1.6,tgt_u3,ssh,failed,,,,suspicious,multiple_account_targeting,Multiple accounts targeted from one IP
+2026-09-25 10:40:30,LOGIN_FAILED,authentication,10.100.1.6,tgt_u4,ssh,failed,,,,suspicious,multiple_account_targeting,Multiple accounts targeted from one IP
+2026-09-25 10:40:40,LOGIN_FAILED,authentication,10.100.1.6,tgt_u5,ssh,failed,,,,suspicious,multiple_account_targeting,Multiple accounts targeted from one IP
+2026-09-25 10:50:00,LOGIN_SUCCESS,authentication,10.100.1.71,multi_source_victim,ssh,success,,,,suspicious,multiple_source_login,Same user logging in from multiple sources
+2026-09-25 10:50:15,LOGIN_SUCCESS,authentication,10.100.1.72,multi_source_victim,ssh,success,,,,suspicious,multiple_source_login,Same user logging in from multiple sources
+2026-09-25 10:50:30,LOGIN_SUCCESS,authentication,10.100.1.73,multi_source_victim,ssh,success,,,,suspicious,multiple_source_login,Same user logging in from multiple sources
+2026-09-25 11:00:00,HTTP_REQUEST,web,10.100.2.1,,http,error,GET,/admin,403.0,suspicious,restricted_resource_access,Access to restricted admin endpoint
+2026-09-25 11:00:05,HTTP_REQUEST,web,10.100.2.1,,http,error,GET,/admin/config,403.0,suspicious,restricted_resource_access,Access to restricted admin endpoint
+2026-09-25 11:00:10,HTTP_REQUEST,web,10.100.2.1,,http,error,GET,/admin/users,403.0,suspicious,restricted_resource_access,Access to restricted admin endpoint
+2026-09-25 11:00:15,HTTP_REQUEST,web,10.100.2.1,,http,error,GET,/admin/database,403.0,suspicious,restricted_resource_access,Access to restricted admin endpoint
+2026-09-25 11:10:00,HTTP_REQUEST,web,10.100.2.2,,http,success,GET,/api/stream,200.0,suspicious,excessive_requests,High rate of HTTP requests
+2026-09-25 11:10:02,HTTP_REQUEST,web,10.100.2.2,,http,success,GET,/api/stream,200.0,suspicious,excessive_requests,High rate of HTTP requests
+2026-09-25 11:10:04,HTTP_REQUEST,web,10.100.2.2,,http,success,GET,/api/stream,200.0,suspicious,excessive_requests,High rate of HTTP requests
+2026-09-25 11:10:06,HTTP_REQUEST,web,10.100.2.2,,http,success,GET,/api/stream,200.0,suspicious,excessive_requests,High rate of HTTP requests
+2026-09-25 11:10:08,HTTP_REQUEST,web,10.100.2.2,,http,success,GET,/api/stream,200.0,suspicious,excessive_requests,High rate of HTTP requests
+2026-09-25 11:10:10,HTTP_REQUEST,web,10.100.2.2,,http,success,GET,/api/stream,200.0,suspicious,excessive_requests,High rate of HTTP requests
+2026-09-25 11:20:00,HTTP_REQUEST,web,10.100.2.3,,http,error,GET,/missing_file_0.html,404.0,suspicious,repeated_404,Directory probing / 404 burst
+2026-09-25 11:20:05,HTTP_REQUEST,web,10.100.2.3,,http,error,GET,/missing_file_1.html,404.0,suspicious,repeated_404,Directory probing / 404 burst
+2026-09-25 11:20:10,HTTP_REQUEST,web,10.100.2.3,,http,error,GET,/missing_file_2.html,404.0,suspicious,repeated_404,Directory probing / 404 burst
+2026-09-25 11:20:15,HTTP_REQUEST,web,10.100.2.3,,http,error,GET,/missing_file_3.html,404.0,suspicious,repeated_404,Directory probing / 404 burst
+2026-09-25 11:30:00,HTTP_REQUEST,web,10.100.2.4,,http,error,POST,/api/submit,500.0,suspicious,repeated_5xx,Internal server errors caused by payload injection
+2026-09-25 11:30:05,HTTP_REQUEST,web,10.100.2.4,,http,error,POST,/api/submit,500.0,suspicious,repeated_5xx,Internal server errors caused by payload injection
+2026-09-25 11:30:10,HTTP_REQUEST,web,10.100.2.4,,http,error,POST,/api/submit,500.0,suspicious,repeated_5xx,Internal server errors caused by payload injection
+2026-09-25 11:30:15,HTTP_REQUEST,web,10.100.2.4,,http,error,POST,/api/submit,500.0,suspicious,repeated_5xx,Internal server errors caused by payload injection
+2026-09-25 11:40:00,HTTP_REQUEST,web,10.100.2.5,,http,error,GET,/wp-admin,404.0,suspicious,sensitive_path_enumeration,Known administrative URL enumeration
+2026-09-25 11:40:05,HTTP_REQUEST,web,10.100.2.5,,http,error,GET,/phpmyadmin,404.0,suspicious,sensitive_path_enumeration,Known administrative URL enumeration
+2026-09-25 11:40:10,HTTP_REQUEST,web,10.100.2.5,,http,error,GET,/backup.zip,404.0,suspicious,sensitive_path_enumeration,Known administrative URL enumeration
+2026-09-25 12:00:00,FIREWALL_EVENT,firewall,10.100.3.1,,tcp/20,DENY,,,,suspicious,firewall_denial_burst,Port scan connection drops
+2026-09-25 12:00:05,FIREWALL_EVENT,firewall,10.100.3.1,,tcp/21,DENY,,,,suspicious,firewall_denial_burst,Port scan connection drops
+2026-09-25 12:00:10,FIREWALL_EVENT,firewall,10.100.3.1,,tcp/22,DENY,,,,suspicious,firewall_denial_burst,Port scan connection drops
+2026-09-25 12:00:15,FIREWALL_EVENT,firewall,10.100.3.1,,tcp/23,DENY,,,,suspicious,firewall_denial_burst,Port scan connection drops
+2026-09-25 12:10:00,APP_ERROR,application,10.100.4.1,,payment,error,,,,suspicious,application_errors,Repeated application transaction failure
+2026-09-25 12:10:05,APP_ERROR,application,10.100.4.1,,payment,error,,,,suspicious,application_errors,Repeated application transaction failure
+2026-09-25 12:10:10,APP_ERROR,application,10.100.4.1,,payment,error,,,,suspicious,application_errors,Repeated application transaction failure
+2026-09-25 12:10:15,APP_ERROR,application,10.100.4.1,,payment,error,,,,suspicious,application_errors,Repeated application transaction failure
+2026-09-25 12:20:00,SYSTEM_EVENT,system,10.100.5.1,,auditd,stopped,,,,suspicious,service_failures,Security daemon stopped unexpectedly
+2026-09-25 12:20:05,SYSTEM_EVENT,system,10.100.5.1,,auditd,stopped,,,,suspicious,service_failures,Security daemon stopped unexpectedly
+2026-09-25 12:20:10,SYSTEM_EVENT,system,10.100.5.1,,auditd,stopped,,,,suspicious,service_failures,Security daemon stopped unexpectedly
+2026-09-25 12:20:15,SYSTEM_EVENT,system,10.100.5.1,,auditd,stopped,,,,suspicious,service_failures,Security daemon stopped unexpectedly

@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    container_name: log-analysis-backend
+    environment:
+      - APP_ENV=${APP_ENV:-production}
+      - API_KEY=${API_KEY:-dev-insecure-key-change-in-prod}
+      - ADMIN_API_KEY=${ADMIN_API_KEY:-dev-admin-key-change-in-prod}
+      - DATABASE_URL=sqlite:///data/security_analytics.db
+      - ALLOW_ORIGINS=http://localhost,http://localhost:80,http://localhost:5173
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - log-analysis-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    container_name: log-analysis-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - log-analysis-network
+
+networks:
+  log-analysis-network:
+    name: log-analysis-network
+    driver: bridge

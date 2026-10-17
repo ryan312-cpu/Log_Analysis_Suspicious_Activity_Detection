@@ -3,3 +3,8 @@ numpy
 pydantic
 python-dotenv
 pytest
+SQLAlchemy
+fastapi
+uvicorn[standard]
+httpx
+reportlab

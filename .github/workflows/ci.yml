@@ -1,0 +1,67 @@
+name: Security Platform CI Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Run Unit & Regression Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install flake8
+
+      - name: Lint source code
+        run: |
+          flake8 src/ --max-line-length=120 --ignore=E501,W503 || true
+
+      - name: Run automated tests
+        run: |
+          python -m pytest tests/detection tests/validation tests/performance tests/security -v
+
+  security-check:
+    name: Secrets & Repository Integrity
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify .env is not committed
+        run: |
+          if git ls-files | grep -E '(^|/)\.env$'; then
+            echo "CRITICAL: Live .env file detected in git tracking!"
+            exit 1
+          fi
+          echo "PASS: No .env file tracked in git."
+
+      - name: Verify .env.example exists
+        run: |
+          test -f .env.example || (echo "ERROR: .env.example missing!" && exit 1)
+
+  docker-lint:
+    name: Docker Configuration Lint & Validation
+    runs-on: ubuntu-latest
+    needs: [test, security-check]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate Docker Compose Configuration
+        run: |
+          docker compose config --quiet

@@ -1,0 +1,78 @@
+event_id,timestamp,event_type,event_category,source_ip,source_port,destination_ip,destination_port,username,hostname,service,action,status,http_method,http_path,response_code,user_agent,source_type,raw_log
+AUTH-000001,2026-09-25 08:00:12,LOGIN_SUCCESS,authentication,192.168.10.25,,,,alice,,ssh,,success,,,,,authentication,2026-09-25 08:00:12 LOGIN_SUCCESS src=192.168.10.25 user=alice service=ssh
+AUTH-000002,2026-09-25 08:04:31,LOGIN_SUCCESS,authentication,192.168.10.31,,,,bob,,ssh,,success,,,,,authentication,2026-09-25 08:04:31 LOGIN_SUCCESS src=192.168.10.31 user=bob service=ssh
+AUTH-000003,2026-09-25 08:10:45,LOGIN_SUCCESS,authentication,192.168.10.42,,,,charlie,,ssh,,success,,,,,authentication,2026-09-25 08:10:45 LOGIN_SUCCESS src=192.168.10.42 user=charlie service=ssh
+AUTH-000004,2026-09-25 08:15:22,LOGIN_SUCCESS,authentication,192.168.10.18,,,,david,,ssh,,success,,,,,authentication,2026-09-25 08:15:22 LOGIN_SUCCESS src=192.168.10.18 user=david service=ssh
+AUTH-000005,2026-09-25 08:21:17,LOGIN_SUCCESS,authentication,192.168.10.25,,,,alice,,ssh,,success,,,,,authentication,2026-09-25 08:21:17 LOGIN_SUCCESS src=192.168.10.25 user=alice service=ssh
+AUTH-000006,2026-09-25 08:35:02,LOGIN_FAILED,authentication,192.168.10.55,,,,alice,,ssh,,failed,,,,,authentication,2026-09-25 08:35:02 LOGIN_FAILED src=192.168.10.55 user=alice service=ssh
+AUTH-000007,2026-09-25 08:35:10,LOGIN_FAILED,authentication,192.168.10.55,,,,alice,,ssh,,failed,,,,,authentication,2026-09-25 08:35:10 LOGIN_FAILED src=192.168.10.55 user=alice service=ssh
+AUTH-000008,2026-09-25 08:35:18,LOGIN_FAILED,authentication,192.168.10.55,,,,alice,,ssh,,failed,,,,,authentication,2026-09-25 08:35:18 LOGIN_FAILED src=192.168.10.55 user=alice service=ssh
+AUTH-000009,2026-09-25 08:35:27,LOGIN_FAILED,authentication,192.168.10.55,,,,alice,,ssh,,failed,,,,,authentication,2026-09-25 08:35:27 LOGIN_FAILED src=192.168.10.55 user=alice service=ssh
+AUTH-000010,2026-09-25 08:35:35,LOGIN_FAILED,authentication,192.168.10.55,,,,alice,,ssh,,failed,,,,,authentication,2026-09-25 08:35:35 LOGIN_FAILED src=192.168.10.55 user=alice service=ssh
+AUTH-000011,2026-09-25 08:36:01,LOGIN_SUCCESS,authentication,192.168.10.55,,,,alice,,ssh,,success,,,,,authentication,2026-09-25 08:36:01 LOGIN_SUCCESS src=192.168.10.55 user=alice service=ssh
+AUTH-000012,2026-09-25 09:10:11,LOGIN_SUCCESS,authentication,192.168.10.20,,,,emma,,ssh,,success,,,,,authentication,2026-09-25 09:10:11 LOGIN_SUCCESS src=192.168.10.20 user=emma service=ssh
+AUTH-000013,2026-09-25 09:25:42,LOGIN_FAILED,authentication,192.168.10.70,,,,admin,,ssh,,failed,,,,,authentication,2026-09-25 09:25:42 LOGIN_FAILED src=192.168.10.70 user=admin service=ssh
+AUTH-000014,2026-09-25 09:26:03,LOGIN_FAILED,authentication,192.168.10.70,,,,root,,ssh,,failed,,,,,authentication,2026-09-25 09:26:03 LOGIN_FAILED src=192.168.10.70 user=root service=ssh
+AUTH-000015,2026-09-25 09:26:25,LOGIN_FAILED,authentication,192.168.10.70,,,,test,,ssh,,failed,,,,,authentication,2026-09-25 09:26:25 LOGIN_FAILED src=192.168.10.70 user=test service=ssh
+AUTH-000016,2026-09-25 09:26:47,LOGIN_FAILED,authentication,192.168.10.70,,,,administrator,,ssh,,failed,,,,,authentication,2026-09-25 09:26:47 LOGIN_FAILED src=192.168.10.70 user=administrator service=ssh
+AUTH-000017,2026-09-25 09:27:09,LOGIN_FAILED,authentication,192.168.10.70,,,,guest,,ssh,,failed,,,,,authentication,2026-09-25 09:27:09 LOGIN_FAILED src=192.168.10.70 user=guest service=ssh
+AUTH-000018,2026-09-25 10:05:12,LOGIN_SUCCESS,authentication,192.168.10.33,,,,frank,,ssh,,success,,,,,authentication,2026-09-25 10:05:12 LOGIN_SUCCESS src=192.168.10.33 user=frank service=ssh
+AUTH-000019,2026-09-25 10:15:43,LOGIN_SUCCESS,authentication,192.168.10.44,,,,grace,,ssh,,success,,,,,authentication,2026-09-25 10:15:43 LOGIN_SUCCESS src=192.168.10.44 user=grace service=ssh
+AUTH-000020,2026-09-25 10:45:29,LOGIN_SUCCESS,authentication,192.168.10.52,,,,henry,,ssh,,success,,,,,authentication,2026-09-25 10:45:29 LOGIN_SUCCESS src=192.168.10.52 user=henry service=ssh
+AUTH-000021,2026-09-25 23:47:10,LOGIN_SUCCESS,authentication,192.168.10.25,,,,alice,,ssh,,success,,,,,authentication,2026-09-25 23:47:10 LOGIN_SUCCESS src=192.168.10.25 user=alice service=ssh
+AUTH-000022,2026-09-25 23:52:41,LOGIN_SUCCESS,authentication,192.168.10.31,,,,bob,,ssh,,success,,,,,authentication,2026-09-25 23:52:41 LOGIN_SUCCESS src=192.168.10.31 user=bob service=ssh
+WEB-000001,2026-09-25 10:00:01,HTTP_REQUEST,web,192.168.10.25,,,,,,http,request,success,GET,/home,200,,web,2026-09-25 10:00:01 src=192.168.10.25 method=GET path=/home status=200
+WEB-000002,2026-09-25 10:00:05,HTTP_REQUEST,web,192.168.10.31,,,,,,http,request,success,GET,/dashboard,200,,web,2026-09-25 10:00:05 src=192.168.10.31 method=GET path=/dashboard status=200
+WEB-000003,2026-09-25 10:01:12,HTTP_REQUEST,web,192.168.10.42,,,,,,http,request,success,GET,/profile,200,,web,2026-09-25 10:01:12 src=192.168.10.42 method=GET path=/profile status=200
+WEB-000004,2026-09-25 10:02:18,HTTP_REQUEST,web,192.168.10.18,,,,,,http,request,success,POST,/login,200,,web,2026-09-25 10:02:18 src=192.168.10.18 method=POST path=/login status=200
+WEB-000005,2026-09-25 10:03:21,HTTP_REQUEST,web,192.168.10.25,,,,,,http,request,success,GET,/reports,200,,web,2026-09-25 10:03:21 src=192.168.10.25 method=GET path=/reports status=200
+WEB-000006,2026-09-25 10:10:02,HTTP_REQUEST,web,192.168.10.90,,,,,,http,request,error,GET,/admin,403,,web,2026-09-25 10:10:02 src=192.168.10.90 method=GET path=/admin status=403
+WEB-000007,2026-09-25 10:10:04,HTTP_REQUEST,web,192.168.10.90,,,,,,http,request,error,GET,/admin/config,403,,web,2026-09-25 10:10:04 src=192.168.10.90 method=GET path=/admin/config status=403
+WEB-000008,2026-09-25 10:10:06,HTTP_REQUEST,web,192.168.10.90,,,,,,http,request,error,GET,/admin/users,403,,web,2026-09-25 10:10:06 src=192.168.10.90 method=GET path=/admin/users status=403
+WEB-000009,2026-09-25 10:10:08,HTTP_REQUEST,web,192.168.10.90,,,,,,http,request,error,GET,/admin/database,403,,web,2026-09-25 10:10:08 src=192.168.10.90 method=GET path=/admin/database status=403
+WEB-000010,2026-09-25 10:10:10,HTTP_REQUEST,web,192.168.10.90,,,,,,http,request,error,GET,/admin/secrets,403,,web,2026-09-25 10:10:10 src=192.168.10.90 method=GET path=/admin/secrets status=403
+WEB-000011,2026-09-25 10:12:11,HTTP_REQUEST,web,192.168.10.25,,,,,,http,request,success,GET,/api/users,200,,web,2026-09-25 10:12:11 src=192.168.10.25 method=GET path=/api/users status=200
+WEB-000012,2026-09-25 10:12:15,HTTP_REQUEST,web,192.168.10.25,,,,,,http,request,success,GET,/api/users/1,200,,web,2026-09-25 10:12:15 src=192.168.10.25 method=GET path=/api/users/1 status=200
+WEB-000013,2026-09-25 10:12:19,HTTP_REQUEST,web,192.168.10.25,,,,,,http,request,success,GET,/api/users/2,200,,web,2026-09-25 10:12:19 src=192.168.10.25 method=GET path=/api/users/2 status=200
+WEB-000014,2026-09-25 10:12:23,HTTP_REQUEST,web,192.168.10.25,,,,,,http,request,success,GET,/api/users/3,200,,web,2026-09-25 10:12:23 src=192.168.10.25 method=GET path=/api/users/3 status=200
+WEB-000015,2026-09-25 10:12:27,HTTP_REQUEST,web,192.168.10.25,,,,,,http,request,success,GET,/api/users/4,200,,web,2026-09-25 10:12:27 src=192.168.10.25 method=GET path=/api/users/4 status=200
+WEB-000016,2026-09-25 10:12:31,HTTP_REQUEST,web,192.168.10.25,,,,,,http,request,success,GET,/api/users/5,200,,web,2026-09-25 10:12:31 src=192.168.10.25 method=GET path=/api/users/5 status=200
+WEB-000017,2026-09-25 10:20:15,HTTP_REQUEST,web,192.168.10.75,,,,,,http,request,error,GET,/login,404,,web,2026-09-25 10:20:15 src=192.168.10.75 method=GET path=/login status=404
+WEB-000018,2026-09-25 10:20:17,HTTP_REQUEST,web,192.168.10.75,,,,,,http,request,error,GET,/wp-admin,404,,web,2026-09-25 10:20:17 src=192.168.10.75 method=GET path=/wp-admin status=404
+WEB-000019,2026-09-25 10:20:19,HTTP_REQUEST,web,192.168.10.75,,,,,,http,request,error,GET,/phpmyadmin,404,,web,2026-09-25 10:20:19 src=192.168.10.75 method=GET path=/phpmyadmin status=404
+WEB-000020,2026-09-25 10:20:21,HTTP_REQUEST,web,192.168.10.75,,,,,,http,request,error,GET,/login,404,,web,2026-09-25 10:20:21 src=192.168.10.75 method=GET path=/login status=404
+WEB-000021,2026-09-25 10:20:23,HTTP_REQUEST,web,192.168.10.75,,,,,,http,request,error,GET,/backup,404,,web,2026-09-25 10:20:23 src=192.168.10.75 method=GET path=/backup status=404
+WEB-000022,2026-09-25 11:00:05,HTTP_REQUEST,web,192.168.10.42,,,,,,http,request,success,GET,/home,200,,web,2026-09-25 11:00:05 src=192.168.10.42 method=GET path=/home status=200
+WEB-000023,2026-09-25 11:15:21,HTTP_REQUEST,web,192.168.10.31,,,,,,http,request,success,GET,/products,200,,web,2026-09-25 11:15:21 src=192.168.10.31 method=GET path=/products status=200
+APP-000001,2026-09-25 10:00:10,APP_LOGIN,application,,,,,alice,,,,success,,,,,application,2026-09-25 10:00:10 APP_LOGIN user=alice status=success
+APP-000002,2026-09-25 10:01:14,APP_REQUEST,application,,,,,alice,,,view_dashboard,success,,,,,application,2026-09-25 10:01:14 APP_REQUEST user=alice action=view_dashboard status=success
+APP-000003,2026-09-25 10:02:20,APP_REQUEST,application,,,,,bob,,,view_profile,success,,,,,application,2026-09-25 10:02:20 APP_REQUEST user=bob action=view_profile status=success
+APP-000004,2026-09-25 10:03:25,APP_REQUEST,application,,,,,charlie,,,view_report,success,,,,,application,2026-09-25 10:03:25 APP_REQUEST user=charlie action=view_report status=success
+APP-000005,2026-09-25 10:10:12,APP_ACCESS,application,,,,,unknown,,,admin_panel,denied,,,,,application,2026-09-25 10:10:12 APP_ACCESS user=unknown action=admin_panel status=denied
+APP-000006,2026-09-25 10:10:14,APP_ACCESS,application,,,,,unknown,,,user_database,denied,,,,,application,2026-09-25 10:10:14 APP_ACCESS user=unknown action=user_database status=denied
+APP-000007,2026-09-25 10:10:16,APP_ACCESS,application,,,,,unknown,,,configuration,denied,,,,,application,2026-09-25 10:10:16 APP_ACCESS user=unknown action=configuration status=denied
+APP-000008,2026-09-25 10:10:18,APP_ACCESS,application,,,,,unknown,,,credentials,denied,,,,,application,2026-09-25 10:10:18 APP_ACCESS user=unknown action=credentials status=denied
+APP-000009,2026-09-25 10:20:10,APP_ERROR,application,,,,,,,payment,,database_connection_failed,,,,,application,2026-09-25 10:20:10 APP_ERROR service=payment error=database_connection_failed
+APP-000010,2026-09-25 10:20:12,APP_ERROR,application,,,,,,,payment,,database_connection_failed,,,,,application,2026-09-25 10:20:12 APP_ERROR service=payment error=database_connection_failed
+APP-000011,2026-09-25 10:20:14,APP_ERROR,application,,,,,,,payment,,database_connection_failed,,,,,application,2026-09-25 10:20:14 APP_ERROR service=payment error=database_connection_failed
+APP-000012,2026-09-25 10:20:16,APP_ERROR,application,,,,,,,payment,,database_connection_failed,,,,,application,2026-09-25 10:20:16 APP_ERROR service=payment error=database_connection_failed
+APP-000013,2026-09-25 10:20:18,APP_ERROR,application,,,,,,,payment,,database_connection_failed,,,,,application,2026-09-25 10:20:18 APP_ERROR service=payment error=database_connection_failed
+APP-000014,2026-09-25 11:00:21,APP_REQUEST,application,,,,,emma,,,view_dashboard,success,,,,,application,2026-09-25 11:00:21 APP_REQUEST user=emma action=view_dashboard status=success
+SEC-000001,2026-09-25 09:00:01,FIREWALL_EVENT,security,192.168.10.25,,10.0.0.10,,,,https,allow,allow,,,,,firewall,2026-09-25 09:00:01 FIREWALL action=allow src=192.168.10.25 dst=10.0.0.10 service=https
+SEC-000002,2026-09-25 09:02:14,FIREWALL_EVENT,security,192.168.10.31,,10.0.0.10,,,,https,allow,allow,,,,,firewall,2026-09-25 09:02:14 FIREWALL action=allow src=192.168.10.31 dst=10.0.0.10 service=https
+SEC-000003,2026-09-25 09:05:22,FIREWALL_EVENT,security,192.168.10.90,,10.0.0.10,,,,ssh,deny,deny,,,,,firewall,2026-09-25 09:05:22 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+SEC-000004,2026-09-25 09:05:24,FIREWALL_EVENT,security,192.168.10.90,,10.0.0.10,,,,ssh,deny,deny,,,,,firewall,2026-09-25 09:05:24 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+SEC-000005,2026-09-25 09:05:26,FIREWALL_EVENT,security,192.168.10.90,,10.0.0.10,,,,ssh,deny,deny,,,,,firewall,2026-09-25 09:05:26 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+SEC-000006,2026-09-25 09:05:28,FIREWALL_EVENT,security,192.168.10.90,,10.0.0.10,,,,ssh,deny,deny,,,,,firewall,2026-09-25 09:05:28 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+SEC-000007,2026-09-25 09:05:30,FIREWALL_EVENT,security,192.168.10.90,,10.0.0.10,,,,ssh,deny,deny,,,,,firewall,2026-09-25 09:05:30 FIREWALL action=deny src=192.168.10.90 dst=10.0.0.10 service=ssh
+SEC-000008,2026-09-25 09:10:12,FIREWALL_EVENT,security,192.168.10.25,,10.0.0.10,,,,https,allow,allow,,,,,firewall,2026-09-25 09:10:12 FIREWALL action=allow src=192.168.10.25 dst=10.0.0.10 service=https
+SEC-000009,2026-09-25 09:15:42,FIREWALL_EVENT,security,192.168.10.42,,10.0.0.10,,,,https,allow,allow,,,,,firewall,2026-09-25 09:15:42 FIREWALL action=allow src=192.168.10.42 dst=10.0.0.10 service=https
+SYS-000001,2026-09-25 08:00:01,SYSTEM_EVENT,system,,,,,,,sshd,,started,,,,,system,2026-09-25 08:00:01 SYSTEM service=sshd status=started
+SYS-000002,2026-09-25 08:05:10,SYSTEM_EVENT,system,,,,,,,nginx,,started,,,,,system,2026-09-25 08:05:10 SYSTEM service=nginx status=started
+SYS-000003,2026-09-25 08:10:22,SYSTEM_EVENT,system,,,,,,,database,,started,,,,,system,2026-09-25 08:10:22 SYSTEM service=database status=started
+SYS-000004,2026-09-25 10:20:01,SYSTEM_EVENT,system,,,,,,,payment,,error,,,,,system,2026-09-25 10:20:01 SYSTEM service=payment status=error
+SYS-000005,2026-09-25 10:20:02,SYSTEM_EVENT,system,,,,,,,payment,,error,,,,,system,2026-09-25 10:20:02 SYSTEM service=payment status=error
+SYS-000006,2026-09-25 10:20:03,SYSTEM_EVENT,system,,,,,,,payment,,error,,,,,system,2026-09-25 10:20:03 SYSTEM service=payment status=error
+SYS-000007,2026-09-25 10:20:04,SYSTEM_EVENT,system,,,,,,,payment,,error,,,,,system,2026-09-25 10:20:04 SYSTEM service=payment status=error
+SYS-000008,2026-09-25 10:20:05,SYSTEM_EVENT,system,,,,,,,payment,,error,,,,,system,2026-09-25 10:20:05 SYSTEM service=payment status=error
+SYS-000009,2026-09-25 11:00:01,SYSTEM_EVENT,system,,,,,,,payment,,recovered,,,,,system,2026-09-25 11:00:01 SYSTEM service=payment status=recovered

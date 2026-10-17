@@ -1,0 +1,68 @@
+[
+  {
+    "benchmark": "parser",
+    "dataset_size": 1000,
+    "parsing_time_s": 0.0028,
+    "events_per_second": 353719,
+    "memory_mb": 0.42,
+    "records_parsed": 1000
+  },
+  {
+    "benchmark": "parser",
+    "dataset_size": 10000,
+    "parsing_time_s": 0.0301,
+    "events_per_second": 331876,
+    "memory_mb": 4.18,
+    "records_parsed": 10000
+  },
+  {
+    "benchmark": "parser",
+    "dataset_size": 50000,
+    "parsing_time_s": 0.1479,
+    "events_per_second": 338093,
+    "memory_mb": 20.95,
+    "records_parsed": 50000
+  },
+  {
+    "benchmark": "detection",
+    "dataset_size": 1000,
+    "detection_time_s": 0.0035,
+    "events_per_second": 283848,
+    "alerts_generated": 150
+  },
+  {
+    "benchmark": "detection",
+    "dataset_size": 10000,
+    "detection_time_s": 0.0326,
+    "events_per_second": 306577,
+    "alerts_generated": 1500
+  },
+  {
+    "benchmark": "detection",
+    "dataset_size": 50000,
+    "detection_time_s": 0.2261,
+    "events_per_second": 221141,
+    "alerts_generated": 7500
+  },
+  {
+    "benchmark": "database",
+    "dataset_size": 1000,
+    "insertion_time_s": 0.014,
+    "events_per_second": 71180,
+    "rows_verified": 1000
+  },
+  {
+    "benchmark": "database",
+    "dataset_size": 10000,
+    "insertion_time_s": 0.1804,
+    "events_per_second": 55420,
+    "rows_verified": 10000
+  },
+  {
+    "benchmark": "database",
+    "dataset_size": 50000,
+    "insertion_time_s": 1.3215,
+    "events_per_second": 37835,
+    "rows_verified": 50000
+  }
+]

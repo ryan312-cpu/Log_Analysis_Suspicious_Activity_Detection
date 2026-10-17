@@ -1,0 +1,16 @@
+Rule ID,Detection Scenario,Expected Result,Test Status
+AUTH-001,Multiple Failed Logins,Suspicious,PASS
+AUTH-002,Repeated Access Denied,Suspicious,PASS
+AUTH-003,Unusual Login Time,Suspicious,PASS
+AUTH-004,Successful Login After Failures,Suspicious,PASS
+AUTH-005,Password Spraying,Suspicious,PASS
+AUTH-006,Multiple Account Targeting,Suspicious,PASS
+AUTH-007,Multiple Source Login,Suspicious,PASS
+WEB-001,Restricted Resource Access,Suspicious,PASS
+WEB-002,Excessive Request Volume,Suspicious,PASS
+WEB-003,Repeated HTTP 404 Responses,Suspicious,PASS
+WEB-004,Repeated HTTP 5xx Responses,Suspicious,PASS
+WEB-005,Sensitive Path Enumeration,Suspicious,PASS
+FW-001,Repeated Firewall Denials,Suspicious,PASS
+APP-001,Repeated Application Errors,Suspicious,PASS
+SYS-001,Repeated Service Failures,Suspicious,PASS

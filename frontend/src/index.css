@@ -1,0 +1,13 @@
+html {
+  background: #0f172a;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}

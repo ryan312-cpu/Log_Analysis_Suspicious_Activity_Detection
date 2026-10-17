@@ -1,0 +1,66 @@
+[
+  {
+    "Test ID": "CV-001",
+    "Scenario": "Multiple Failed Logins",
+    "Expected Rule": "AUTH-001",
+    "Expected Severity": "HIGH",
+    "Actual Result": "AUTH-001 fired (HIGH)",
+    "Status": "PASS"
+  },
+  {
+    "Test ID": "CV-002",
+    "Scenario": "Password Spraying",
+    "Expected Rule": "AUTH-005",
+    "Expected Severity": "HIGH",
+    "Actual Result": "AUTH-005 fired (HIGH)",
+    "Status": "PASS"
+  },
+  {
+    "Test ID": "CV-003",
+    "Scenario": "Login After Failures",
+    "Expected Rule": "AUTH-004",
+    "Expected Severity": "CRITICAL",
+    "Actual Result": "AUTH-004 fired (CRITICAL)",
+    "Status": "PASS"
+  },
+  {
+    "Test ID": "CV-004",
+    "Scenario": "Sensitive Path Enumeration",
+    "Expected Rule": "WEB-005",
+    "Expected Severity": "HIGH",
+    "Actual Result": "WEB-005 fired (HIGH)",
+    "Status": "PASS"
+  },
+  {
+    "Test ID": "CV-005",
+    "Scenario": "Excessive Request Volume",
+    "Expected Rule": "WEB-002",
+    "Expected Severity": "MEDIUM",
+    "Actual Result": "WEB-002 fired (MEDIUM)",
+    "Status": "PASS"
+  },
+  {
+    "Test ID": "CV-006",
+    "Scenario": "Firewall Denial Burst",
+    "Expected Rule": "FW-001",
+    "Expected Severity": "HIGH",
+    "Actual Result": "FW-001 fired (HIGH)",
+    "Status": "PASS"
+  },
+  {
+    "Test ID": "CV-007",
+    "Scenario": "Application Error Burst",
+    "Expected Rule": "APP-001",
+    "Expected Severity": "MEDIUM",
+    "Actual Result": "APP-001 fired (MEDIUM)",
+    "Status": "PASS"
+  },
+  {
+    "Test ID": "CV-008",
+    "Scenario": "Service Failure Burst",
+    "Expected Rule": "SYS-001",
+    "Expected Severity": "HIGH",
+    "Actual Result": "SYS-001 fired (HIGH)",
+    "Status": "PASS"
+  }
+]

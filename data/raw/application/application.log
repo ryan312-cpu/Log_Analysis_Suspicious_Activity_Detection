@@ -1,0 +1,14 @@
+2026-09-25 10:00:10 APP_LOGIN user=alice status=success
+2026-09-25 10:01:14 APP_REQUEST user=alice action=view_dashboard status=success
+2026-09-25 10:02:20 APP_REQUEST user=bob action=view_profile status=success
+2026-09-25 10:03:25 APP_REQUEST user=charlie action=view_report status=success
+2026-09-25 10:10:12 APP_ACCESS user=unknown action=admin_panel status=denied
+2026-09-25 10:10:14 APP_ACCESS user=unknown action=user_database status=denied
+2026-09-25 10:10:16 APP_ACCESS user=unknown action=configuration status=denied
+2026-09-25 10:10:18 APP_ACCESS user=unknown action=credentials status=denied
+2026-09-25 10:20:10 APP_ERROR service=payment error=database_connection_failed
+2026-09-25 10:20:12 APP_ERROR service=payment error=database_connection_failed
+2026-09-25 10:20:14 APP_ERROR service=payment error=database_connection_failed
+2026-09-25 10:20:16 APP_ERROR service=payment error=database_connection_failed
+2026-09-25 10:20:18 APP_ERROR service=payment error=database_connection_failed
+2026-09-25 11:00:21 APP_REQUEST user=emma action=view_dashboard status=success

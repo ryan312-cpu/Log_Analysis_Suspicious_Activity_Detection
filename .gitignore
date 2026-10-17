@@ -24,8 +24,21 @@ Thumbs.db
 # Temporary files
 *.tmp
 
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
 # Generated reports
 reports/generated/
 
 # Generated model files
 models/generated/
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+
+# Application runtime logs
+logs/*.log
+!logs/.gitkeep
