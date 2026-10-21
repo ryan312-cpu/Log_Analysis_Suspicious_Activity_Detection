@@ -1,5 +1,4 @@
 ip_address,threat_type,confidence,source,description
-198.51.100.10,phishing,92,synthetic-local-feed,Reserved test IP participating in synthetic phishing campaign
-198.51.100.42,malware,85,synthetic-local-feed,Reserved test IP hosting command-and-control beaconing samples
-203.0.113.77,credential stuffing,78,synthetic-local-feed,Reserved test IP used in repeated login attack simulations
-203.0.113.99,botnet,80,synthetic-local-feed,Reserved test IP flagged for synthetic botnet coordination traffic
+203.0.113.50,brute_force,90,LAB-TI,Reserved documentation IP used in controlled brute-force simulations
+203.0.113.60,phishing,80,LAB-TI,Reserved documentation IP hosting controlled phishing campaign samples
+203.0.113.77,credential stuffing,78,LAB-TI,Reserved documentation IP used in repeated login attack simulations

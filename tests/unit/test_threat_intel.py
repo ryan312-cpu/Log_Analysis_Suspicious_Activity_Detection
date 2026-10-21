@@ -5,18 +5,19 @@ def test_feed_loader_reads_local_synthetic_feed():
     records = load_threat_feed()
 
     assert isinstance(records, dict)
-    assert "198.51.100.10" in records
-    assert records["198.51.100.10"].threat_type == "phishing"
+    # The canonical feed uses 203.0.113.x documentation IPs (RFC 5737).
+    assert "203.0.113.50" in records
+    assert records["203.0.113.50"].threat_type == "brute_force"
 
 
 def test_lookup_service_and_enrichment():
     service = ThreatIntelService()
-    record = service.lookup_ip("198.51.100.10")
+    record = service.lookup_ip("203.0.113.50")
 
     assert record is not None
-    assert service.is_known_threat("198.51.100.10") is True
+    assert service.is_known_threat("203.0.113.50") is True
 
     enrichment = ThreatEnrichment()
-    bonus = enrichment.score_ip("198.51.100.10")
+    bonus = enrichment.score_ip("203.0.113.50")
 
     assert bonus > 0.0

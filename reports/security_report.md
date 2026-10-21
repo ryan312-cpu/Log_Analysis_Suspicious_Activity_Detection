@@ -1,9 +1,9 @@
 # Security Analytics Report
 
-Generated at: 2026-10-14T04:32:41.114817+00:00
+Generated at: 2026-10-21T14:57:15.360604+00:00
 
 ## Executive Summary
-The environment generated 77 security events and 37 alerts during the observed period, with repeated authentication and web abuse activity concentrated around the most active source IPs. The highest-risk indicators were driven by brute-force login attempts and restricted resource access, while 4 threat-intel matches flagged known malicious infrastructure. No confirmed incidents are open at the time of this report. The current telemetry suggests continued monitoring should remain focused on the relevant internal sources and suspicious external hosts.
+The environment generated 77 security events and 37 alerts during the observed period, with repeated authentication and web abuse activity concentrated around the most active source IPs. The highest-risk indicators were driven by brute-force login attempts and restricted resource access, while 4 threat-intel matches flagged known malicious infrastructure. 37 incident(s) remain open and require follow-up. The current telemetry suggests continued monitoring should remain focused on the relevant internal sources and suspicious external hosts.
 
 ## Detection Statistics
 - Total events: 77
@@ -12,7 +12,7 @@ The environment generated 77 security events and 37 alerts during the observed p
 - High alerts: 23
 - Medium alerts: 12
 - Threat intel records: 4
-- Open incidents: 0
+- Open incidents: 37
 
 ## Alert Summary
 - CRITICAL: 2
@@ -21,10 +21,10 @@ The environment generated 77 security events and 37 alerts during the observed p
 - LOW: 0
 
 ## Incident Summary
-- Total incidents: 0
-- Open incidents: 0
+- Total incidents: 37
+- Open incidents: 37
 - Resolved incidents: 0
-- Status breakdown: {}
+- Status breakdown: {'OPEN': 37}
 
 ## Top Source IPs
 - 192.168.10.25: 13 events
