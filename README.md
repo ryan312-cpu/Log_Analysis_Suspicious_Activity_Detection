@@ -11,6 +11,10 @@ apply security detection rules, correlate related events,
 perform anomaly analysis, generate alerts, and provide
 security-focused reports and visualizations.
 
+## System Workflow Architecture
+
+![Workflow Architecture Diagram](screenshots/workflow_architecture.png)
+
 ## 2. Project Objectives
 
 - Collect and ingest security-relevant logs
