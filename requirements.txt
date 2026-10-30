@@ -8,3 +8,5 @@ fastapi
 uvicorn[standard]
 httpx
 reportlab
+matplotlib
+PyYAML
