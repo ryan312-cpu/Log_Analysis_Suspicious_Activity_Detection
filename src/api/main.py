@@ -1,3 +1,4 @@
+import os
 import time
 
 from fastapi import FastAPI, HTTPException, Request
@@ -19,9 +20,10 @@ configure_logging()
 
 initialize_database()
 
-_docs = None if is_production() else "/docs"
-_redoc = None if is_production() else "/redoc"
-_openapi = None if is_production() else "/openapi.json"
+_disable_docs = os.environ.get("DISABLE_DOCS", "").lower() in {"1", "true", "yes"}
+_docs = None if _disable_docs else "/docs"
+_redoc = None if _disable_docs else "/redoc"
+_openapi = None if _disable_docs else "/openapi.json"
 
 app = FastAPI(
     title="Log Analysis & Suspicious Activity Detection API",
@@ -89,6 +91,26 @@ app.include_router(investigation.router, prefix="/api/v1")
 app.include_router(threat_intel.router, prefix="/api/v1")
 app.include_router(incidents.router, prefix="/api/v1")
 app.include_router(reports.router, prefix="/api/v1")
+
+
+@app.get("/")
+def root_index():
+    return {
+        "service": "Log Analysis and Suspicious Activity Detection Platform API",
+        "status": "running",
+        "version": "1.0.0",
+        "documentation": "/docs",
+        "health": "/health",
+        "health_detailed": "/health/detailed",
+        "metrics": "/metrics",
+        "endpoints": {
+            "events": "/api/v1/events",
+            "alerts": "/api/v1/alerts",
+            "incidents": "/api/v1/incidents",
+            "threat_intel": "/api/v1/threat-intel",
+            "reports": "/api/v1/reports"
+        }
+    }
 
 
 @app.get("/health")
