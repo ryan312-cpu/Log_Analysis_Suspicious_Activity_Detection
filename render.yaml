@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: log-analysis-api
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: "pip install -r requirements.txt && python -m src.parsers.run_parsers && python -m src.storage.import_events && python -m src.detection.run_detection && python -m src.threat_intel.import_feed && python -m src.incidents.create_incidents"
+    startCommand: "uvicorn src.api.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: APP_ENV
+        value: production
+      - key: API_KEY
+        generateValue: true
+      - key: ADMIN_API_KEY
+        generateValue: true
+      - key: ALLOW_ORIGINS
+        value: "*"
