@@ -20,6 +20,10 @@ configure_logging()
 
 initialize_database()
 
+# Automatically seed sample security events on startup if database is empty
+from src.storage.seed import ensure_initial_seed
+ensure_initial_seed()
+
 _disable_docs = os.environ.get("DISABLE_DOCS", "").lower() in {"1", "true", "yes"}
 _docs = None if _disable_docs else "/docs"
 _redoc = None if _disable_docs else "/redoc"

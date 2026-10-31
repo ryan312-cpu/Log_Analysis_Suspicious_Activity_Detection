@@ -40,7 +40,7 @@ function App() {
       setError(null);
     } catch (err) {
       console.error(err);
-      setError('Unable to connect to Security Analytics API.');
+      setError(err.message || 'Unable to connect to Security Analytics API.');
     } finally {
       setLoading(false);
     }
