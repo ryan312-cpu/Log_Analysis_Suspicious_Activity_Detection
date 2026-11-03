@@ -254,9 +254,12 @@ python -m pytest tests/detection tests/validation tests/performance tests/securi
 
 ## Project Status
 
-**Phase 22 — Final Integration & Submission Preparation (Ready for Demonstration)**
+**Core platform complete and ready for demonstration.** Cloud demo deployment
+is documented for a Vercel dashboard and Render API; see the
+[deployment guide](docs/deployment.md#7-cloud-demo-deployment-render--vercel).
+Use only sample data in cloud demos; see the guide for the security and
+persistence limitations.
 
 ## Academic Use
 
 This project is developed for educational and cybersecurity research purposes and should only be deployed against systems and data for which appropriate authorization exists.
-
