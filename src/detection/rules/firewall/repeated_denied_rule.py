@@ -22,6 +22,7 @@ class RepeatedFirewallDeniedRule(BaseDetectionRule):
     DENY_VALUES = {"deny", "denied", "block", "blocked"}
 
     def evaluate(self, events: Sequence[EventModel]) -> list[Alert]:
+        threshold = self.get_configured_threshold(self.THRESHOLD)
         events_by_ip: dict[str, list[EventModel]] = defaultdict(list)
         for event in events:
             action = (event.action or "").strip().casefold()
@@ -33,7 +34,7 @@ class RepeatedFirewallDeniedRule(BaseDetectionRule):
 
         alerts = []
         for source_ip, matching in sorted(events_by_ip.items()):
-            if len(matching) < self.THRESHOLD:
+            if len(matching) < threshold:
                 continue
             matching.sort(key=lambda event: (event.timestamp, event.event_id))
             services = sorted({event.service for event in matching if event.service})

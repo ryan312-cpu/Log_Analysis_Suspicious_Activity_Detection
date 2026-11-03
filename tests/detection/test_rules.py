@@ -121,26 +121,19 @@ def test_successful_login_after_failures():
 
     events = [
         make_auth_event(
-            "FAIL-1",
-            "2026-09-25 10:00:00",
+            f"FAIL-{index + 1}",
+            f"2026-09-25 10:00:{index * 10:02d}",
             "LOGIN_FAILED",
-        ),
-        make_auth_event(
-            "FAIL-2",
-            "2026-09-25 10:00:20",
-            "LOGIN_FAILED",
-        ),
-        make_auth_event(
-            "FAIL-3",
-            "2026-09-25 10:00:40",
-            "LOGIN_FAILED",
-        ),
+        )
+        for index in range(5)
+    ]
+    events.append(
         make_auth_event(
             "SUCCESS-1",
             "2026-09-25 10:01:00",
             "LOGIN_SUCCESS",
-        ),
-    ]
+        )
+    )
 
     rule = SuccessfulLoginAfterFailuresRule()
 

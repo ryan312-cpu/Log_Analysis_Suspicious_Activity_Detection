@@ -35,7 +35,18 @@ class BaseDetectionRule(ABC):
 
     @property
     def is_enabled(self) -> bool:
-        return PolicyManager.get_instance().is_rule_enabled(self.rule_id)
+        return PolicyManager.get_instance().is_rule_enabled(
+            self.rule_id,
+            default=self.metadata.enabled,
+        )
 
-    def get_configured_threshold(self, default: int = 5) -> int:
-        return PolicyManager.get_instance().get_threshold(self.rule_id, default=default)
+    def get_configured_threshold(
+        self,
+        default: int = 5,
+        policy_field: str = "threshold",
+    ) -> int:
+        return PolicyManager.get_instance().get_threshold(
+            self.rule_id,
+            default=default,
+            policy_field=policy_field,
+        )

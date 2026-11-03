@@ -22,6 +22,10 @@ class MultipleSourceLoginRule(BaseDetectionRule):
     SOURCE_THRESHOLD = 3
 
     def evaluate(self, events: Sequence[EventModel]) -> list[Alert]:
+        source_threshold = self.get_configured_threshold(
+            self.SOURCE_THRESHOLD,
+            "distinct_ips_threshold",
+        )
         events_by_user: dict[str, list[EventModel]] = defaultdict(list)
         for event in events:
             if (
@@ -34,7 +38,7 @@ class MultipleSourceLoginRule(BaseDetectionRule):
         alerts = []
         for username, user_events in sorted(events_by_user.items()):
             sources = sorted({event.source_ip for event in user_events})
-            if len(sources) < self.SOURCE_THRESHOLD:
+            if len(sources) < source_threshold:
                 continue
             user_events.sort(
                 key=lambda event: (event.timestamp, event.event_id)

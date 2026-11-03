@@ -27,6 +27,10 @@ class SuccessfulLoginAfterFailuresRule(
 
     def evaluate(self, events):
 
+        failure_threshold = self.get_configured_threshold(
+            self.FAILURE_THRESHOLD,
+            "failed_threshold",
+        )
         events_by_ip = defaultdict(list)
 
         for event in events:
@@ -85,7 +89,7 @@ class SuccessfulLoginAfterFailuresRule(
 
                 if (
                     len(recent_failures)
-                    < self.FAILURE_THRESHOLD
+                    < failure_threshold
                 ):
                     continue
 

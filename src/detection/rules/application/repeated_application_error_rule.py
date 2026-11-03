@@ -21,6 +21,7 @@ class RepeatedApplicationErrorRule(BaseDetectionRule):
     ERROR_EVENT_TYPES = {"APP_ERROR", "API_ERROR"}
 
     def evaluate(self, events: Sequence[EventModel]) -> list[Alert]:
+        threshold = self.get_configured_threshold(self.THRESHOLD)
         events_by_service: dict[str, list[EventModel]] = defaultdict(list)
         for event in events:
             if event.event_type in self.ERROR_EVENT_TYPES and event.service:
@@ -28,7 +29,7 @@ class RepeatedApplicationErrorRule(BaseDetectionRule):
 
         alerts = []
         for service, matching in sorted(events_by_service.items()):
-            if len(matching) < self.THRESHOLD:
+            if len(matching) < threshold:
                 continue
             matching.sort(key=lambda event: (event.timestamp, event.event_id))
             alerts.append(

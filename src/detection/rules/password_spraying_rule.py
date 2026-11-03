@@ -25,6 +25,10 @@ class PasswordSprayingRule(BaseDetectionRule):
 
     def evaluate(self, events):
 
+        user_threshold = self.get_configured_threshold(
+            self.USER_THRESHOLD,
+            "unique_users_threshold",
+        )
         events_by_ip = defaultdict(list)
 
         for event in events:
@@ -85,7 +89,7 @@ class PasswordSprayingRule(BaseDetectionRule):
                             candidate
                         )
 
-                if len(users) >= self.USER_THRESHOLD:
+                if len(users) >= user_threshold:
 
                     alerts.append(
                         Alert(

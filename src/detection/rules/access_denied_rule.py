@@ -28,6 +28,7 @@ class RepeatedAccessDeniedRule(BaseDetectionRule):
         events: List[EventModel],
     ) -> List[Alert]:
 
+        threshold = self.get_configured_threshold(self.THRESHOLD)
         denied_by_ip = defaultdict(list)
 
         for event in events:
@@ -48,7 +49,7 @@ class RepeatedAccessDeniedRule(BaseDetectionRule):
             denied_by_ip.items()
         ):
 
-            if len(denied_events) < self.THRESHOLD:
+            if len(denied_events) < threshold:
                 continue
 
             first_event = denied_events[0]

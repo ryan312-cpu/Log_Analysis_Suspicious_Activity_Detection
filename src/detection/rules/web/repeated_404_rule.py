@@ -21,6 +21,7 @@ class Repeated404Rule(BaseDetectionRule):
     THRESHOLD = 4
 
     def evaluate(self, events: Sequence[EventModel]) -> list[Alert]:
+        threshold = self.get_configured_threshold(self.THRESHOLD)
         events_by_ip: dict[str, list[EventModel]] = defaultdict(list)
         for event in events:
             if event.response_code == 404 and event.source_ip:
@@ -28,7 +29,7 @@ class Repeated404Rule(BaseDetectionRule):
 
         alerts = []
         for source_ip, matching in sorted(events_by_ip.items()):
-            if len(matching) < self.THRESHOLD:
+            if len(matching) < threshold:
                 continue
             matching.sort(key=lambda event: (event.timestamp, event.event_id))
             paths = sorted({event.http_path for event in matching if event.http_path})

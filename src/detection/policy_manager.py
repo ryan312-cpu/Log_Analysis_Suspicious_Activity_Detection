@@ -80,14 +80,32 @@ class PolicyManager:
     def get_rule_policy(self, rule_id: str) -> Optional[RulePolicyModel]:
         return self._policy.rules.get(rule_id)
 
-    def is_rule_enabled(self, rule_id: str) -> bool:
+    def is_rule_enabled(self, rule_id: str, default: bool = True) -> bool:
         rule_pol = self.get_rule_policy(rule_id)
-        return rule_pol.enabled if rule_pol else True
+        return rule_pol.enabled if rule_pol else default
 
-    def get_threshold(self, rule_id: str, default: int = 5) -> int:
+    def get_threshold(
+        self,
+        rule_id: str,
+        default: int = 5,
+        policy_field: str = "threshold",
+    ) -> int:
+        if policy_field not in {
+            "threshold",
+            "failed_threshold",
+            "unique_users_threshold",
+            "account_threshold",
+            "distinct_ips_threshold",
+        }:
+            raise ValueError(f"Unsupported threshold policy field: {policy_field}")
         rule_pol = self.get_rule_policy(rule_id)
-        if rule_pol and rule_pol.threshold is not None:
-            return rule_pol.threshold
+        configured_threshold = (
+            getattr(rule_pol, policy_field)
+            if rule_pol is not None
+            else None
+        )
+        if configured_threshold is not None:
+            return configured_threshold
         return default
 
     def get_severity(self, rule_id: str, default: str = "HIGH") -> str:

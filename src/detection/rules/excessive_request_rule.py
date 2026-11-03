@@ -28,6 +28,7 @@ class ExcessiveRequestRule(BaseDetectionRule):
         events: List[EventModel],
     ) -> List[Alert]:
 
+        threshold = self.get_configured_threshold(self.THRESHOLD)
         requests_by_ip = defaultdict(list)
 
         for event in events:
@@ -46,7 +47,7 @@ class ExcessiveRequestRule(BaseDetectionRule):
             requests_by_ip.items()
         ):
 
-            if len(request_events) < self.THRESHOLD:
+            if len(request_events) < threshold:
                 continue
 
             first = request_events[0]

@@ -90,9 +90,9 @@ def scenario_password_spraying(source_ip: str = "10.99.2.1", count: int = 5) -> 
 def scenario_login_after_failures(
     source_ip: str = "10.99.3.1",
     username: str = "finance_admin",
-    failures: int = 4,
+    failures: int = 5,
 ) -> List[SimpleNamespace]:
-    """CV-003: Successful login after failures targeting AUTH-004 (Threshold: 3 failures then success)."""
+    """CV-003: Successful login after five failures, matching the AUTH-004 policy."""
     events = [
         _make_event(
             idx=i,
@@ -142,8 +142,8 @@ def scenario_web_enumeration(source_ip: str = "10.99.4.1") -> List[SimpleNamespa
     ]
 
 
-def scenario_excessive_requests(source_ip: str = "10.99.5.1", count: int = 8) -> List[SimpleNamespace]:
-    """CV-005: Excessive HTTP request volume targeting WEB-002 (Threshold: 5)."""
+def scenario_excessive_requests(source_ip: str = "10.99.5.1", count: int = 50) -> List[SimpleNamespace]:
+    """CV-005: Excessive HTTP request volume matching the WEB-002 policy."""
     return [
         _make_event(
             idx=i,
@@ -162,7 +162,7 @@ def scenario_excessive_requests(source_ip: str = "10.99.5.1", count: int = 8) ->
 
 
 def scenario_firewall_denial_burst(source_ip: str = "10.99.6.1", count: int = 6) -> List[SimpleNamespace]:
-    """CV-006: Burst of firewall denied packets targeting FW-001 (Threshold: 4)."""
+    """CV-006: Burst of firewall denied packets targeting FW-001 (Threshold: 5)."""
     return [
         _make_event(
             idx=i,
@@ -179,7 +179,7 @@ def scenario_firewall_denial_burst(source_ip: str = "10.99.6.1", count: int = 6)
 
 
 def scenario_application_errors(count: int = 5) -> List[SimpleNamespace]:
-    """CV-007: Repeated application service errors targeting APP-001 (Threshold: 3)."""
+    """CV-007: Repeated application service errors targeting APP-001 (Threshold: 5)."""
     return [
         _make_event(
             idx=i,

@@ -1,3 +1,4 @@
+from dataclasses import replace
 from typing import List
 
 from src.detection.models.alert import Alert
@@ -18,7 +19,10 @@ class DetectionEngine:
 
     @property
     def rule_metadata(self) -> List[RuleMetadata]:
-        return [rule.metadata for rule in self.rules]
+        return [
+            replace(rule.metadata, enabled=rule.is_enabled)
+            for rule in self.rules
+        ]
 
     def run(
         self,
@@ -28,6 +32,8 @@ class DetectionEngine:
         all_alerts = []
 
         for rule in self.rules:
+            if not rule.is_enabled:
+                continue
 
             alerts = rule.evaluate(events)
 

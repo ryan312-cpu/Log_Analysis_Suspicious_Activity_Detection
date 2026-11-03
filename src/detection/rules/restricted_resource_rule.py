@@ -37,6 +37,7 @@ class RestrictedResourceRule(BaseDetectionRule):
         events: List[EventModel],
     ) -> List[Alert]:
 
+        threshold = self.get_configured_threshold(self.THRESHOLD)
         attempts = defaultdict(list)
 
         for event in events:
@@ -62,7 +63,7 @@ class RestrictedResourceRule(BaseDetectionRule):
 
         for source_ip, events_list in attempts.items():
 
-            if len(events_list) < self.THRESHOLD:
+            if len(events_list) < threshold:
                 continue
 
             first = events_list[0]

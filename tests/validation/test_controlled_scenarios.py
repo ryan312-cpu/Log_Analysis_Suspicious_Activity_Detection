@@ -86,7 +86,7 @@ def test_cv004_web005_fires():
 
 def test_cv005_web002_fires():
     engine = DetectionEngine(get_rule_library())
-    events = scenario_excessive_requests(count=8)
+    events = scenario_excessive_requests(count=50)
     alerts = engine.run(events)
     rules = {a.rule_id for a in alerts}
     assert "WEB-002" in rules

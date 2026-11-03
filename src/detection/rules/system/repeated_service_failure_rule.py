@@ -21,6 +21,7 @@ class RepeatedServiceFailureRule(BaseDetectionRule):
     FAILURE_STATES = {"error", "failed", "failure", "stopped"}
 
     def evaluate(self, events: Sequence[EventModel]) -> list[Alert]:
+        threshold = self.get_configured_threshold(self.THRESHOLD)
         events_by_service: dict[str, list[EventModel]] = defaultdict(list)
         for event in events:
             status = (event.status or "").strip().casefold()
@@ -33,7 +34,7 @@ class RepeatedServiceFailureRule(BaseDetectionRule):
 
         alerts = []
         for service, matching in sorted(events_by_service.items()):
-            if len(matching) < self.THRESHOLD:
+            if len(matching) < threshold:
                 continue
             matching.sort(key=lambda event: (event.timestamp, event.event_id))
             alerts.append(

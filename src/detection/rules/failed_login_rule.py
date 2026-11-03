@@ -28,6 +28,7 @@ class MultipleFailedLoginRule(BaseDetectionRule):
         events: List[EventModel],
     ) -> List[Alert]:
 
+        threshold = self.get_configured_threshold(self.THRESHOLD)
         failed_by_ip = defaultdict(list)
 
         for event in events:
@@ -46,7 +47,7 @@ class MultipleFailedLoginRule(BaseDetectionRule):
             failed_by_ip.items()
         ):
 
-            if len(failed_events) < self.THRESHOLD:
+            if len(failed_events) < threshold:
                 continue
 
             first_event = failed_events[0]

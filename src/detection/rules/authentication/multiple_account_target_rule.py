@@ -28,6 +28,10 @@ class MultipleAccountTargetRule(BaseDetectionRule):
     WINDOW_SECONDS = 120
 
     def evaluate(self, events: Sequence[EventModel]) -> list[Alert]:
+        account_threshold = self.get_configured_threshold(
+            self.USER_THRESHOLD,
+            "account_threshold",
+        )
         events_by_ip: dict[str, list[EventModel]] = defaultdict(list)
         for event in events:
             if (
@@ -52,7 +56,7 @@ class MultipleAccountTargetRule(BaseDetectionRule):
                 users = sorted(
                     {event.username for event in window_events if event.username}
                 )
-                if len(users) < self.USER_THRESHOLD:
+                if len(users) < account_threshold:
                     continue
 
                 alerts.append(

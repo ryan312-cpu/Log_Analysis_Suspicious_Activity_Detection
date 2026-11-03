@@ -126,14 +126,14 @@ def test_repeated_404_rule():
             response_code=404,
             path=f"/missing-{index}",
         )
-        for index in range(4)
+        for index in range(5)
     ]
 
     alerts = Repeated404Rule().evaluate(events)
 
     assert len(alerts) == 1
     assert alerts[0].rule_id == "WEB-003"
-    assert len(alerts[0].event_ids) == 4
+    assert len(alerts[0].event_ids) == 5
 
 
 def test_repeated_5xx_rule():
@@ -144,7 +144,7 @@ def test_repeated_5xx_rule():
             category="web",
             response_code=response_code,
         )
-        for index, response_code in enumerate((500, 503, 599))
+        for index, response_code in enumerate((500, 503, 599, 502, 504))
     ]
 
     alerts = Repeated5xxRule().evaluate(events)
@@ -180,14 +180,14 @@ def test_repeated_firewall_denial_accepts_parser_uppercase_action():
             status="DENY",
             service=f"tcp/{port}",
         )
-        for index, port in enumerate((22, 23, 80, 443))
+        for index, port in enumerate((22, 23, 80, 443, 8080))
     ]
 
     alerts = RepeatedFirewallDeniedRule().evaluate(events)
 
     assert len(alerts) == 1
     assert alerts[0].rule_id == "FW-001"
-    assert len(alerts[0].event_ids) == 4
+    assert len(alerts[0].event_ids) == 5
 
 
 def test_repeated_application_error_rule():
@@ -199,7 +199,7 @@ def test_repeated_application_error_rule():
             service="payment",
             status="error",
         )
-        for index in range(3)
+        for index in range(5)
     ]
 
     alerts = RepeatedApplicationErrorRule().evaluate(events)
