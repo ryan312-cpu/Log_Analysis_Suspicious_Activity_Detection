@@ -1,0 +1,127 @@
+{
+  "organization_name": "Acme Global Defense Corp",
+  "policy_version": "1.0.0",
+  "last_updated": "2026-11-01T00:00:00Z",
+  "rules": {
+    "AUTH-001": {
+      "rule_name": "Multiple Failed Logins",
+      "enabled": true,
+      "severity": "HIGH",
+      "threshold": 5,
+      "description": "Trigger alert after N failed authentication attempts from the same source IP"
+    },
+    "AUTH-002": {
+      "rule_name": "Repeated Access Denied",
+      "enabled": true,
+      "severity": "MEDIUM",
+      "threshold": 5,
+      "description": "Trigger alert when access is denied repeatedly"
+    },
+    "AUTH-003": {
+      "rule_name": "Unusual Login Time",
+      "enabled": true,
+      "severity": "MEDIUM",
+      "allowed_start_hour": 6,
+      "allowed_end_hour": 22,
+      "description": "Alert on logins occurring outside standard operational business hours"
+    },
+    "AUTH-004": {
+      "rule_name": "Successful Login After Failures",
+      "enabled": true,
+      "severity": "CRITICAL",
+      "failed_threshold": 5,
+      "window_seconds": 120,
+      "description": "Critical alert when a successful authentication follows multiple failures within window"
+    },
+    "AUTH-005": {
+      "rule_name": "Password Spraying",
+      "enabled": true,
+      "severity": "HIGH",
+      "unique_users_threshold": 3,
+      "window_seconds": 120,
+      "description": "Detects single source attempting passwords against multiple distinct user accounts"
+    },
+    "AUTH-006": {
+      "rule_name": "Multiple Account Targeting",
+      "enabled": true,
+      "severity": "HIGH",
+      "account_threshold": 3,
+      "window_seconds": 120,
+      "description": "Alerts when an IP targets more than N administrative or user accounts"
+    },
+    "AUTH-007": {
+      "rule_name": "Multiple Source Login",
+      "enabled": true,
+      "severity": "HIGH",
+      "distinct_ips_threshold": 2,
+      "description": "Detects same username concurrently authenticating from multiple IP addresses"
+    },
+    "WEB-001": {
+      "rule_name": "Restricted Resource Access",
+      "enabled": true,
+      "severity": "HIGH",
+      "threshold": 3,
+      "restricted_paths": [
+        "/admin",
+        "/admin/config",
+        "/admin/database",
+        "/admin/secrets",
+        "/admin/users",
+        "/phpmyadmin",
+        "/.env",
+        "/wp-admin"
+      ],
+      "description": "Flags unauthorized reconnaissance or access against sensitive URL endpoints"
+    },
+    "WEB-002": {
+      "rule_name": "Excessive Request Volume",
+      "enabled": true,
+      "severity": "MEDIUM",
+      "threshold": 50,
+      "window_seconds": 60,
+      "description": "Rate-limiting policy: alerts on high HTTP request floods (potential DoS/scraping)"
+    },
+    "WEB-003": {
+      "rule_name": "Repeated 404 Responses",
+      "enabled": true,
+      "severity": "MEDIUM",
+      "threshold": 5,
+      "description": "Detects automated directory or endpoint enumeration scans"
+    },
+    "WEB-004": {
+      "rule_name": "Repeated 5xx Server Errors",
+      "enabled": true,
+      "severity": "MEDIUM",
+      "threshold": 5,
+      "description": "Monitors backend crash bursts potentially caused by malicious payloads"
+    },
+    "WEB-005": {
+      "rule_name": "Sensitive Path Enumeration",
+      "enabled": true,
+      "severity": "HIGH",
+      "threshold": 3,
+      "description": "Flags requests directed at known credential or configuration leaks"
+    },
+    "FW-001": {
+      "rule_name": "Repeated Firewall Denials",
+      "enabled": true,
+      "severity": "HIGH",
+      "threshold": 5,
+      "description": "Alerts when packet filtering firewall denies connections repeatedly"
+    },
+    "APP-001": {
+      "rule_name": "Repeated Application Errors",
+      "enabled": true,
+      "severity": "MEDIUM",
+      "threshold": 5,
+      "description": "Alerts on recurring unhandled application exceptions"
+    },
+    "SYS-001": {
+      "rule_name": "Repeated Service Failures",
+      "enabled": true,
+      "severity": "HIGH",
+      "threshold": 3,
+      "description": "Alerts when system services experience consecutive crashes or stops"
+    }
+  }
+}
