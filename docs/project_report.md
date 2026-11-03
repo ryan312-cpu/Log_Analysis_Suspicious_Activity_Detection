@@ -44,7 +44,7 @@
 This capstone project delivers a **production-grade Security Operations Centre (SOC) platform** for real-time log analysis and suspicious activity detection. The system ingests multi-source log data (authentication, web, firewall, application, system), normalises events into a unified schema, applies a library of 15 rule-based detection algorithms, enriches alerts with MITRE ATT&CK framework mappings and threat intelligence, manages security incidents through a full lifecycle, and surfaces results through an interactive React dashboard and REST API.
 
 **Key outcomes:**
-- **180 automated tests** passing across 9 test suites (0 failures)
+- **183 automated tests** passing (0 failures)
 - **100% recall** on a labelled 132-event validation dataset (TP=62, FP=0, FN=0)
 - **8/8 controlled attack scenarios** detected with correct severity assignment
 - **15 detection rules** mapped to **8 MITRE ATT&CK tactics**
@@ -84,7 +84,7 @@ A Security Information and Event Management (SIEM) system automates this process
 | 11 | Containerised deployment (Docker) | ✅ |
 | 12 | CI/CD pipeline (GitHub Actions) | ✅ |
 | 13 | Security hardening (auth, rate-limiting, input validation) | ✅ |
-| 14 | Comprehensive automated test suite | ✅ (180 tests) |
+| 14 | Comprehensive automated test suite | ✅ (183 tests) |
 
 ### 2.3 Scope
 
@@ -438,7 +438,7 @@ The `enrich_alert_with_mitre()` function adds `mitre_tactic`, `mitre_technique`,
 
 ### 8.1 Unit & Integration Tests
 
-**Total: 180 tests, 0 failures**
+**Total: 183 tests, 0 failures**
 
 | Test Suite | File Location | Tests | Focus |
 |------------|--------------|-------|-------|
@@ -562,7 +562,7 @@ Two Docker images:
 |--------|-------|
 | Detection rules implemented | 15 |
 | MITRE ATT&CK tactics covered | 8 |
-| Automated tests passing | 180 |
+| Automated tests passing | 183 |
 | Detection recall (labelled dataset) | 100% |
 | Controlled scenario pass rate | 8/8 (100%) |
 | Parser throughput (50k events) | ~338k events/s |
@@ -604,7 +604,7 @@ This capstone project successfully delivers a fully functional, production-quali
 1. **Correctness** — 100% recall on labelled data, 8/8 controlled attack scenarios detected
 2. **Performance** — 338,000 events/second parsing throughput, O(n) scaling
 3. **Security** — authentication, rate limiting, input validation, security headers, no committed secrets
-4. **Maintainability** — 180 automated tests, modular architecture, Docker containerisation
+4. **Maintainability** — 183 automated tests, modular architecture, Docker containerisation
 5. **Standards alignment** — 15 rules mapped to 8 MITRE ATT&CK tactics
 
 The platform demonstrates the feasibility of building a comprehensive security analytics system using Python's scientific and web ecosystem, and provides a strong foundation for extension with streaming ingestion, ML-based anomaly detection, and production database backends.
@@ -643,7 +643,7 @@ Log_Analysis_Suspicious_Activity_Detection/
 │   ├── src/                           # Components, pages, API client
 │   └── package.json
 │
-├── tests/                             # 180 automated tests
+├── tests/                             # 183 automated tests
 │   ├── conftest.py                    # Shared fixtures
 │   ├── detection/                     # Rule and engine tests
 │   ├── security/                      # Hardening tests

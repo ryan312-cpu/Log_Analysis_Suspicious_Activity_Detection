@@ -169,10 +169,12 @@ in future versions, including:
 
 ## 10. Dataset Source
 
-The project will use a combination of appropriately licensed
-sample/public datasets and controlled synthetic security events.
-Dataset sources and licensing information will be documented
-before inclusion in the final submission.
+The bundled event data and `LAB-TI` feed are controlled synthetic samples
+created for development, testing, and demonstration. The sample feed uses
+reserved documentation IP addresses and is not a live threat-intelligence
+feed. See [data/DATASET.md](data/DATASET.md) and
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Any future external dataset
+or feed must be reviewed for licensing and redistribution terms before use.
 
 ## 11. Project Structure
 
@@ -247,9 +249,9 @@ python -m src.reporting.generate_report
 ```
 
 ## 13. Running Automated Tests
-Run the entire regression test suite (127 automated tests across all 7 test suites):
+Run the complete test suite:
 ```bash
-python -m pytest tests/detection tests/validation tests/performance tests/security tests/deployment tests/monitoring tests/mitre -v
+python -m pytest -v
 ```
 
 ## Project Status
@@ -263,3 +265,14 @@ persistence limitations.
 ## Academic Use
 
 This project is developed for educational and cybersecurity research purposes and should only be deployed against systems and data for which appropriate authorization exists.
+
+## License
+
+This project is licensed under the Apache License, Version 2.0.
+You may use, reproduce, modify, distribute, and commercially utilize the
+project in accordance with the terms of the license. A copy is available in
+the [`LICENSE`](LICENSE) file.
+
+Third-party libraries, datasets, and threat-intelligence sources remain subject
+to their respective licenses and usage conditions. See
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
